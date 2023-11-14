@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add a New Session</title>
+</head>
+<body>
+    <h1>Add a New Session</h1>
+    <p>Enter the date and weight you used for your hangboard session</p>
+
+    <form action="/hangsession/add" method="post">
+    <label for="date" >Date</label>
+        <input type="text" id="date" name="date" required/>
+
+    <label for="weight">Weight</label>
+        <input type="text" id="weight" name="weight" required/>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+
+</html>

@@ -3,10 +3,8 @@ package com.greenhouse.Thymeleaflinks.models;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class User {
@@ -17,6 +15,8 @@ public class User {
     private int id;
     private String username;
     private String pwHash;
+    @OneToMany(mappedBy = "user")
+    private List<HangSession> hangSessions;
 
     public User(){}
 
@@ -31,6 +31,10 @@ public class User {
 
     public int getId() {
         return id;
+    }
+
+    public List<HangSession> getHangSessions() {
+        return hangSessions;
     }
 
     public boolean isMatchingPassword(String password) {
