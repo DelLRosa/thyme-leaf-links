@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title></title>
-</head>
-<body>
-<form method="post">
+<head th:replace="fragments:: head"></head>
+<body class="text-center">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand">Hangboard Tracker</a>
+</nav>
+<form method="post" class="form-signin">
     <div class="form-group">
         <label th:for="username">Username
             <input class="form-control" th:field="${loginFormDTO.username}">

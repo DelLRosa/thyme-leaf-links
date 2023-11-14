@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title></title>
-</head>
+<head th:replace="fragments:: head"></head>
 <body>
+    <nav th:replace="fragments :: header"></nav>
+    <h1>Success!</h1>
+
     <h1>Your Home Page</h1>
     <p>Here's where you can see your recent hangboard sessions and create new ones</p>
     <a href="/hangsession/add">Add New Session</a>
 
-
+    <footer th:replace="fragments :: footer"></footer>
 </body>
 
 </html>
